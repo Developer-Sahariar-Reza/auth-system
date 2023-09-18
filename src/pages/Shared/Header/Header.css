@@ -1,0 +1,33 @@
+.logo-and-nav-container {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo-container h1 {
+  font-size: 35px;
+  font-weight: 800;
+  color: lightslategray;
+}
+
+.slogan h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: lightslategray;
+}

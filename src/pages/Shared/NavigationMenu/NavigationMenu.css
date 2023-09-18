@@ -1,0 +1,32 @@
+.nav-container,
+.nav-container ul,
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-container ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.active {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: lightslategray;
+}
+.not-active {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: lightsalmon;
+}
+
+.profile-container p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+}
