@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: sticky;
+  top: 0px;
+  background-color: white;
 }
 
 .logo-container {
@@ -30,4 +33,35 @@
   font-size: 25px;
   font-weight: 700;
   color: lightslategray;
+}
+
+.time h4 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: lightslategray;
+  margin: 20px 0;
+}
+
+.breaking-news-container {
+  width: 85%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.breaking-news-container h4 {
+  background-color: lightslategray;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.breaking-news-container p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+  color: rgb(124, 8, 8);
 }
