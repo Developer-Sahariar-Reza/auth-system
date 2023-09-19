@@ -1,13 +1,9 @@
 .logo-and-nav-container {
   width: 100%;
-  height: auto;
   margin: 30px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: sticky;
-  top: 0px;
-  background-color: white;
 }
 
 .logo-container {

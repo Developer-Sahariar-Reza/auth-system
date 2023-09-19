@@ -1,0 +1,17 @@
+.category-title {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.category-list {
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.category-list a {
+  color: black;
+  text-decoration: none;
+}
+.category-list a:hover {
+  color: lightslategray;
+  text-decoration: underline;
+}

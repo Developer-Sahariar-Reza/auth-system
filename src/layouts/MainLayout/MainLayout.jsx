@@ -2,7 +2,7 @@ import React from "react";
 import "./MainLayout.css";
 import Header from "../../pages/Shared/Header/Header";
 import CategoriesLayout from "../../pages/Shared/CategoriesLayout/CategoriesLayout";
-import NewsLayout from "../../pages/Shared/NewsLayout/NewsLayout";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
@@ -13,7 +13,7 @@ const MainLayout = () => {
           <CategoriesLayout />
         </div>
         <div className="news">
-          <NewsLayout />
+          <Outlet />
         </div>
       </div>
     </div>
