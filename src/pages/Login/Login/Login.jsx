@@ -9,11 +9,21 @@ const Login = () => {
       <form>
         <div>
           <label>Email Address:</label>
-          <input type="email" placeholder="Your Email Address" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+            required
+          />
         </div>
         <div>
           <label>Password:</label>
-          <input type="password" placeholder="Your Password" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Your Password"
+            required
+          />
         </div>
         <button className="common-button">Login</button>
       </form>
