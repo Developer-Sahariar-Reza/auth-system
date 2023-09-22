@@ -33,7 +33,7 @@ const NavigationMenu = () => {
             </li>
             <li>
               <NavLink
-                to="/login"
+                to="/about"
                 className={({ isActive }) =>
                   isActive ? "active" : "not-active"
                 }
@@ -43,7 +43,7 @@ const NavigationMenu = () => {
             </li>
             <li>
               <NavLink
-                to="/login"
+                to="/contact"
                 className={({ isActive }) =>
                   isActive ? "active" : "not-active"
                 }

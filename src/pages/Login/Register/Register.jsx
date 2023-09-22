@@ -1,6 +1,7 @@
 import React from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
+import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa6";
 
 const Register = () => {
   return (

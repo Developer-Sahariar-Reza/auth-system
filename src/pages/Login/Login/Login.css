@@ -39,3 +39,42 @@ form div input {
   margin-bottom: 20px;
   text-align: center;
 }
+.social-media-login {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-login button {
+  margin-right: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-media-login button:active {
+  transform: scale(0.96);
+}
+
+.social-media-login button span {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.google {
+  background-color: #4a88f4;
+}
+.facebook {
+  background-color: #2068fd;
+}
+.github {
+  background-color: #000000;
+}

@@ -16,13 +16,13 @@
   font-size: 25px;
   font-weight: 600;
   text-decoration: underline;
-  color: lightslategray;
+  color: lightsalmon;
 }
 .not-active {
   font-size: 25px;
   font-weight: 600;
   text-decoration: none;
-  color: lightsalmon;
+  color: lightslategray;
 }
 
 .profile-container p {
