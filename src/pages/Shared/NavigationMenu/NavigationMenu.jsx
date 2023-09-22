@@ -1,8 +1,11 @@
 import React from "react";
 import "./NavigationMenu.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavigationMenu = () => {
+  const { user } = useContext(AuthContext);
   return (
     <nav className="nav-container">
       <ul>
@@ -54,8 +57,14 @@ const NavigationMenu = () => {
 
       {/* profile-container  */}
       <div className="profile-container">
-        <p>Profile Name</p>
-        <button className="common-button">Login</button>
+        <p>{user ? <span>{user.displayName}</span> : "Profile"}</p>
+        {user ? (
+          <button className="common-button">Logout</button>
+        ) : (
+          <Link to="/login">
+            <button className="common-button">Login</button>
+          </Link>
+        )}
       </div>
     </nav>
   );
