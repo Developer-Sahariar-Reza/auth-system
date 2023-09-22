@@ -32,11 +32,37 @@ const Register = () => {
           />
         </div>
         <button className="common-button">Register</button>
+      </form>
+
+      <div className="social-media-login">
+        <button className="google">
+          <span>
+            <FaGoogle />
+          </span>{" "}
+          <span> Login with Google</span>
+        </button>
+
+        <button className="facebook">
+          <span>
+            <FaFacebook />
+          </span>{" "}
+          <span> Login with Facebook</span>
+        </button>
+
+        <button className="github">
+          <span>
+            <FaGithub />
+          </span>{" "}
+          <span> Login with Github</span>
+        </button>
+      </div>
+
+      <div>
         <p className="error-message">Error</p>
         <p className="login-message">
           Already have an Account? <Link to="/login">Please Login</Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 };
