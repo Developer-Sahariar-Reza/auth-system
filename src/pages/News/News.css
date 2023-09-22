@@ -1,0 +1,38 @@
+.news-details-container {
+  width: 50%;
+  margin: 80px auto;
+  border: 1px solid gray;
+  padding: 30px;
+}
+
+.news-details-image,
+.news-info {
+  margin-bottom: 30px;
+}
+
+.news-details-image img {
+  width: 100%;
+}
+
+.news-info h1 {
+  margin-bottom: 25px;
+}
+
+.news-info p {
+  margin-bottom: 25px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.news-info button {
+  display: flex;
+  align-items: center;
+}
+
+.news-info button span {
+  margin-left: 15px;
+}
+
+.news-info a {
+  text-decoration: none;
+}
