@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const CategoriesLayout = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch(
+      "https://the-news-bengal-server-iglhew7k8-developer-sahariar-reza.vercel.app/categories"
+    )
       .then((res) => res.json())
       .then((data) => setCategories(data))
       .catch((error) => console.error(error));
