@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa6";
 import { AuthContext } from "../../../providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSignIn = (event) => {
     event.preventDefault();
 
@@ -20,6 +21,7 @@ const Login = () => {
         console.log(loggedUser);
         form.reset();
         toast.success("Login Successful");
+        navigate("/category/0");
       })
       .catch((error) => {
         const errorMessage = error.message;

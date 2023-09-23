@@ -5,7 +5,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavigationMenu = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <nav className="nav-container">
       <ul>
@@ -59,7 +67,9 @@ const NavigationMenu = () => {
       <div className="profile-container">
         <p>{user ? <span>{user.displayName}</span> : "Profile"}</p>
         {user ? (
-          <button className="common-button">Logout</button>
+          <button className="common-button" onClick={handleLogOut}>
+            Logout
+          </button>
         ) : (
           <Link to="/login">
             <button className="common-button">Login</button>
