@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa6";
+import { AuthContext } from "../../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+  const handleSignIn = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        form.reset();
+        toast.success("Login Successful");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
   return (
     <div className="login">
       <h1>Login Page</h1>
-      <form>
+      <form onSubmit={handleSignIn}>
         <div>
           <label>Email Address:</label>
           <input
