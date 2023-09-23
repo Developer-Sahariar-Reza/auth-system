@@ -1,17 +1,50 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa6";
+import { AuthContext } from "../../../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+      .then((result) => {
+        const createdUser = result.user;
+        form.reset();
+        toast.success("Registration Successful");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      });
+  };
+
   return (
     <div className="register">
       <h1>Register Page</h1>
 
-      <form>
+      <form onSubmit={handleRegister}>
         <div>
           <label>Name</label>
           <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+            required
+          />
         </div>
         <div>
           <label>Password</label>
@@ -19,15 +52,6 @@ const Register = () => {
             type="password"
             name="password"
             placeholder="Your password"
-            required
-          />
-        </div>
-        <div>
-          <label>Confirm Password</label>
-          <input
-            type="password"
-            name="confirm-password"
-            placeholder="Confirm password"
             required
           />
         </div>
