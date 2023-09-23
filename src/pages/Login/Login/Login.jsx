@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub, FaFacebook } from "react-icons/fa6";
 import { AuthContext } from "../../../providers/AuthProvider";
 import toast from "react-hot-toast";
@@ -8,6 +8,9 @@ import toast from "react-hot-toast";
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/category/0";
+
   const handleSignIn = (event) => {
     event.preventDefault();
 
@@ -21,7 +24,7 @@ const Login = () => {
         console.log(loggedUser);
         form.reset();
         toast.success("Login Successful");
-        navigate("/category/0");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
